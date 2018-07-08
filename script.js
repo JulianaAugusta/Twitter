@@ -13,3 +13,14 @@ function showNewTwitter() {
   event.preventDefault();
   textBox.value = "";
 }
+
+function limite_textarea(value) {
+  var quant = 140;
+  var total = value.length;
+    if(total <= quant) {
+        rest = quant - total;
+        document.getElementById('contador').innerHTML = rest;
+    } else {
+        document.getElementById('text-box').value = value.substr(0,quant);
+    }
+}

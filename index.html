@@ -17,14 +17,16 @@
     <section class="section-1">
       <form class="twitter-form" action="index.html" method="post">
         <div class="container-text">
-          <textarea id="text-box" name="name" rows="8" cols="75"></textarea>
+          <textarea onkeyup="limite_textarea(this.value)" id="text-box" name="name" rows="8" cols="75"></textarea>
         </div>
         <div class="">
           <hr class="line">
         </div>
-        <div class="container-bnt">
+        <div class="container-btn">
           <button id="btn" type="button" name="button">TWEET</button>
+          <span id="contador">140</span>
         </div>
+
       </form>
     </section>
     <section id="tweet-area">

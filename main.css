@@ -67,6 +67,16 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
+.button-disabled{
+  font-size: 20px;
+  margin-top: 47px;
+  padding: 20px;
+  background-color: grey;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
 #tweet-area{
   height: auto;
   position: relative;

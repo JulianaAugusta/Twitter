@@ -1,52 +1,53 @@
-var button = document.getElementById('btn');
+var btnSubmit = document.getElementById('button-submit');
 var textBox = document.getElementById('text-box');
-var counterColor = document.getElementById('contador');
-counterColor.textContent = 10;
-// button.setAttribute('disabled', 'true');
+var counterCharacter = document.getElementById('counter-character');
+counterCharacter.textContent = 140;
+btnSubmit.disabled = true;
 
-button.addEventListener('click', showNewTwitter);
-textBox.addEventListener('keydown', moreSpaceInBox);
-textBox.addEventListener('keyup', limiteTextArea);
+textBox.addEventListener('keydown', expandAreaSize);
+textBox.addEventListener('keyup', changeCounterColor);
+btnSubmit.addEventListener('click', showNewTwitter);
 
+function changeCounterColor() {
+    counterCharacter.textContent = (140 - textBox.value.length);
+    console.log(textBox.value.length);
+    if (textBox.value.length === 0 || textBox.value === ' ') {
+        btnSubmit.disabled = true;
+    } else if (textBox.value.length > 140) {
+        counterCharacter.classList = 'color-counter';
+        counterCharacter.classList.add('color-140');
+        btnSubmit.disabled = true;
+    } else if (textBox.value.length >= 110 && textBox.value.length < 120) {
+        counterCharacter.classList = 'color-counter';
+        counterCharacter.classList.add('color-130');
+    } else if (textBox.value.length >= 120 && textBox.value.length <= 140) {
+        counterCharacter.classList = 'color-counter';
+        counterCharacter.classList.add('color-120');
+        btnSubmit.disabled = false;
+    } else {
+        counterCharacter.classList = 'color-counter';
+        btnSubmit.disabled = false;
+    }
+};
 
+function expandAreaSize() {
+    textBox = event.currentTarget;
+    textBox.style.height = 'auto';
+    textBox.style.height = textBox.scrollHeight + 'px';
+};
 
 function showNewTwitter() {
-  var textBox = document.getElementById('text-box');
-  var paragraph = document.createElement('p');
-  paragraph.textContent = textBox.value;
-  paragraph.style.color = 'white';
-  var containerNewTwitter = document.createElement('div');
-  containerNewTwitter.appendChild(paragraph);
-  containerNewTwitter.style.backgroundColor = 'black';
-  var post = document.getElementById('tweet-area');
-  post.appendChild(containerNewTwitter);
-  event.preventDefault();
-  textBox.value = "";
-}
+    event.preventDefault();
+    if (textBox.value) {
+        var containerNewTweet = document.getElementById('tweet-area');
+        var userPost = document.createElement('li');
+        userPost.textContent = textBox.value;
+        var dateOfPost = document.createElement('span');
+        var currentTime = new Date();
+        dateOfPost.textContent = 'Hora: ' + currentTime.getHours() + '\:' + currentTime.getMinutes();
+        userPost.appendChild(dateOfPost);
+        containerNewTweet.appendChild(userPost);
 
-
-function limiteTextArea() {
-  var quant = new Number();
-  quant = 10;
-  var atual = textBox.length;
-  var total = new Number();
-  total = counterColor-atual;
-  document.getElementById('contador').innerHTML = total;
-    // if(total <= quant) {
-    //     rest = quant - total;
-    //     document.getElementById('contador').innerHTML = rest;
-    // }
-}
-
-function moreSpaceInBox() {
-  while (textBox.scrollHeight > textBox.offsetHeight) {
-    text.rows += 1;
-  }
-}
-
-function currentTime() {
-  var data = new Date;
-  var hour = document.createElement('span');
-  hour.textContent = 'Hora: ' + data.getHours() + ':' + data.getMinutes();
-  msg.appendChild(hour);
-}
+        textBox.value = "";
+    }
+};

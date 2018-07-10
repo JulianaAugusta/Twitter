@@ -17,15 +17,14 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
-.header{
+.container{
   background-color: rgb(29, 161, 242);
   color: white;
   height: 85px;
-  margin-top: -21px;
   display: flex;
   justify-content: center;
 }
-.section-1{
+#section-1{
   background: url(abstract-art-artistic-1020315.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -45,30 +44,67 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.container-btn{
-  display: flex;
-  justify-content: space-around;
   align-items: center;
 }
+
 #text-box{
   border: none;
+  width: 100%;
 }
 
-#btn{
+#button-submit{
   font-size: 20px;
-  margin-top: 47px;
-  padding: 20px;
+  margin-top: 37px;
+  padding: 18px;
   background-color: rgb(29, 161, 242);
   border: 2px solid white;
   color: white;
   border-radius: 4px;
   cursor: pointer;
+  width: 143px;
 }
-#tweet-area{
-  height: auto;
+
+#button-submit:disabled {
+  color: 	#FFF8DC;
+  background-color: #C0C0C0;
+}
+
+.container-tweet-area{
+  background-color: white;
+  width: 547px;
+  height: 228px;
+  border-radius: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   position: relative;
-  bottom: 995px;
-  width: 700px;
-  float: right;
+  left: 759px;
+  top: -210px;
 }
+
+#tweet-area{
+list-style: none;
+color: white;
+}
+
+
+.color-counter {
+    color: #00a3ec;
+    font-weight: bold;
+ }
+
+ .color-120 {
+   color: aqua;
+   color: #00FF00;
+ }
+
+ .color-130 {
+   color: blueviolet;
+   color: rgb(255, 239, 9);
+ }
+
+ .color-140 {
+    color: red;
+    color: rgba(255, 0, 0, 0.877);
+ }

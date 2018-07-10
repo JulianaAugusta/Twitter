@@ -42,7 +42,7 @@ function showNewTwitter() {
         var containerNewTweet = document.getElementById('tweet-area');
         var userPost = document.createElement('li');
         userPost.textContent = textBox.value;
-        var dateOfPost = document.createElement('span');
+        var dateOfPost = document.createElement('p');
         var currentTime = new Date();
         dateOfPost.textContent = 'Hora: ' + currentTime.getHours() + '\:' + currentTime.getMinutes();
         userPost.appendChild(dateOfPost);

@@ -84,9 +84,13 @@ body {
 }
 
 #tweet-area{
-list-style: none;
-color: #800080;
+  list-style: none;
+  color: #800080;
+  word-wrap: break-word;
+  width: 547px;
+  margin-right: 40px;
 }
+
 
 
 .color-counter {

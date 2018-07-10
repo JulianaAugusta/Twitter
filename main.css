@@ -36,12 +36,12 @@ body {
 }
 .twitter-form{
   background-color: white;
-  width: 546px;
-  height: 400px;
+  width: 547px;
+  height: 228px;
   position: relative;
-  left: 727px;
+  left: 55px;
   top: 20px;
-  border-radius: 2%;
+  border-radius: 1%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -54,9 +54,7 @@ body {
 #text-box{
   border: none;
 }
-.line{
-  border: 2px solid grey;
-}
+
 #btn{
   font-size: 20px;
   margin-top: 47px;
@@ -67,19 +65,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-.button-disabled{
-  font-size: 20px;
-  margin-top: 47px;
-  padding: 20px;
-  background-color: grey;
-  border: 2px solid white;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
 #tweet-area{
   height: auto;
   position: relative;
-  bottom: 541px;
+  bottom: 995px;
   width: 700px;
+  float: right;
 }

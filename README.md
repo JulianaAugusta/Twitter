@@ -1,6 +1,6 @@
 # Twitter
 
-###Atividade do sprint 2 do Bootcamp da Laboratoria
+### Atividade do sprint 2 do Bootcamp da Laboratoria
 
 Neste desafio, devemos replicar o feed de notícias do Twitter.
 
